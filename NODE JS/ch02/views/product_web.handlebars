@@ -1,0 +1,35 @@
+
+<h1 style="text-align: center;">Product list</h1>
+{{#if products}}
+<div class="product-list">
+    {{#each products}}
+    <div class="product-item">
+        <img style="width:300px;" src="{{image}}" alt="{{name}}" />
+        <p>{{name}}</p>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<p>No products available.</p>
+{{/if}}
+
+<style>
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: calc(25% - 10px); /* Đảm bảo 4 sản phẩm trên mỗi hàng */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+</style>
